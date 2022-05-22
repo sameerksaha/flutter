@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_project/home_page.dart';
 
 
 
@@ -12,16 +13,19 @@ class TestApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int days = 30;    // return integers
+    String name = "Sameer"; // return strings
+    double pi = 3.14; // return in float
+    bool isMale = true; // return true or false
+    num number = 5;  // return any number format, it may be integer or float
+    var check = 0;   // Dart identifies itself what the datatype can be
+    const pi_val = 3.14; // never changes its value
 
-    String name = "Sameer";
+
+
+    
     return MaterialApp(
-      home: Material(
-      child:  Center(
-        child: Container(
-          child: Text("Welcome to My App, $name"),
-          ),
-      ),
-      ),
+      home: HomePage()
     );
   }
 }
