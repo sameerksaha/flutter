@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:test_project/home_page.dart';
+import 'package:test_project/pages/home_page.dart';
+import 'package:test_project/pages/login_page.dart';
 
 
 
@@ -21,11 +22,16 @@ class TestApp extends StatelessWidget {
     var check = 0;   // Dart identifies itself what the datatype can be
     const pi_val = 3.14; // never changes its value
 
-
-
-    
     return MaterialApp(
-      home: HomePage()
+      // home: HomePage(),
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => LoginPage(),
+        "/home": (context) => HomePage()
+      },
     );
   }
 }
