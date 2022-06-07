@@ -22,13 +22,13 @@ class TestApp extends StatelessWidget {
     num number = 5;  // return any number format, it may be integer or float
     var check = 0;   // Dart identifies itself what the datatype can be
     const pi_val = 3.14; // never changes its value
-
     return MaterialApp(
       // home: HomePage(),
       themeMode: ThemeMode.light,
       theme: ThemeData(primarySwatch: Colors.deepPurple),
       darkTheme: ThemeData(brightness: Brightness.dark),
-      initialRoute: "/",
+      initialRoute: MyRoutes.homeRoute,
+      debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => LoginPage(),
         MyRoutes.loginRoute:(context) => LoginPage(),
